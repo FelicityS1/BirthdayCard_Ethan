@@ -27,12 +27,19 @@ $(document).ready(function() {
                 clearInterval(fade);
             }
         }, 100); 
+
+        setTimeout(function() {
+        $(".birthday").css("opacity", "1");
+    }, 600);
     }
 
 
     function close() {
         envelope.addClass("close")
             .removeClass("open");
+
+             $(".birthday").css("opacity", "0");
+             
         music.pause();      
         music.currentTime = 0;
 
